@@ -2,14 +2,6 @@
 ;; Vim mode
 (lem-vi-mode:vi-mode)
 
-;; Load paredit
-(lem-paredit-mode:paredit-mode)
-
-(add-hook lem:*find-file-hook*
-          (lambda (buffer)
-              (change-buffer-mode buffer 'lem-paredit-mode:paredit-mode t)))
-
-
 (defparameter *fer/vi-exit-q-buffers* '("*peek-source*"))
 
 (define-command fer/exit-vi-buffer ()()
